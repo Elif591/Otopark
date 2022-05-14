@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Otopark</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/sidebar/css/style.css">
+</head>
+<body>
+
+    <div class="container d-flex align-items-stretch" style="height:800px; ">
+        <nav id="sidebar" class="img" style="background-image: url(/sidebar/images/bg_1.jpg);">
+            <div class="p-4">
+                <h1 style="margin-top:100px"><a href="#" class="logo">Panel<span></span></a></h1>
+                <ul class="list-unstyled components mb-5" style="margin-top:100px">
+                    <li class="active">
+                        <a href="@Url.Action("Index","Plate")"><span class="fa fa-home mr-3"></span>Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Plates","Plate")"><span class="fa fa-user mr-3"></span>Plakalar</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Login","User")"><span class="fa fa-sticky-note mr-3"></span> Çıkış</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            @RenderBody()
+
+        </div>
+    </div>
+
+
+
+
+    <script src="/sidebar/js/jquery.min.js"></script>
+    <script src="/sidebar/js/popper.js"></script>
+    <script src="/sidebar/js/bootstrap.min.js"></script>
+    <script src="/sidebar/js/main.js"></script>
+</body>
+</html>

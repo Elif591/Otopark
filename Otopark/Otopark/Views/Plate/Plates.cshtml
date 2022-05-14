@@ -1,0 +1,80 @@
+﻿@using Otopark.Models.Model
+@model IEnumerable<Otopark.Models.Model.Plate>
+
+@{
+    ViewBag.Title = "Plates";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/table/css/style.css">
+
+</head>
+<body>
+    <section class="ftco-section" style="margin-top:-100px">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-4">
+                    <h2 class="heading-section">Plakalar</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrap">
+                        <table class="table myaccordion table-hover" id="accordion">
+                            <thead>
+                                <tr>
+                                    <th>Plaka</th>
+                                    <th>Giriş</th>
+                                    <th>Çıkış</th>
+                                    <th>Ücret</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PlateName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Login)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Logout)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Price)
+                                        </td>
+                                        <td>
+                                            <a href="/Plate/Logout/@item.Plateid" class="btn btn-dark">Çıkış</a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/table/js/jquery.min.js"></script>
+    <script src="/table/js/popper.js"></script>
+    <script src="/table/js/bootstrap.min.js"></script>
+    <script src="/table/js/main.js"></script>
+
+</body>
+</html>
+
+

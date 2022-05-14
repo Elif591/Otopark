@@ -1,0 +1,52 @@
+﻿@model Otopark.Models.Model.Capatcy
+
+@{
+    ViewBag.Title = "Otopark";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <div class="container" style="width:1200px; margin-left:-200px; margin-top:200px">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto"  >
+            <div class="card border-0 shadow rounded-3 my-5">
+                <div class="card-body p-4 p-sm-5" style="background-color: #666; border-radius: 15px ">
+                    @using (Html.BeginForm("Index", "Admin", FormMethod.Post))
+                    {
+                        <form>
+                            <p style="color:white;">Kapasite</p>
+                            <div class="row">
+                                <div class="col-md-auto">
+                                    <div class="form-floating mb-3">
+                                        @Html.TextBoxFor(m => m.Capacty,  new { @class = "form-control", style = "background-color:#d376bf", name = "Capacty", id = "Capacty", type = "text", required = ""})
+                                    </div>
+                                </div>
+                                <div class="col col-lg-2">
+                                    <button class="btn btn text-uppercase fw-bold" type="submit" style="background-color: #7b84da; color:white;">Kaydet</button>
+                                </div>
+
+                            </div>
+                            <p style="color:white;">Ücret</p>
+                            <div class="row">
+                                <div class="col-md-auto">
+                                    <div class="form-floating mb-3">
+                                        @Html.TextBoxFor(m => m.Paid, new { @class = "form-control", style = "background-color:#d376bf" ,name = "Paid", id = "Paid", type = "text", required = "" })
+                                    </div>
+                                </div>
+                                <div class="col col-lg-2">
+                                    <button class="btn btn text-uppercase fw-bold" type="submit" style="background-color: #7b84da; color:white;">Kaydet</button>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+

@@ -1,0 +1,38 @@
+﻿@model Otopark.Models.Model.Plate
+
+@{
+    ViewBag.Title = "Otopark";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="container" style="width:1200px; margin-left:-200px; margin-top:200px">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+                <div class="card-body p-4 p-sm-5" style="background-color: #666; border-radius: 15px ">
+                    @using (Html.BeginForm("Index", "Plate", FormMethod.Post))
+                    {
+                        <form>
+                            <p style="color:white;">Plaka</p>
+                            <div class="row">
+                                <div class="col-md-auto">
+                                    <div class="form-floating mb-3">
+                                        @Html.TextBoxFor(m => m.PlateName, new { @class = "form-control", style = "background-color:#d376bf", name = "PlateName", id = "PlateName", type = "text", required = "" })
+                                    </div>
+                                </div>
+                                <div class="col col-lg-2">
+                                    <button class="btn btn-primary text-uppercase fw-bold" type="submit">Giriş</button>
+                                </div>
+                                <div class="bg-danger">
+                                    @ViewBag.uyari
+                                </div>
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+

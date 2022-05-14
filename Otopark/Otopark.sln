@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otopark", "Otopark\Otopark.csproj", "{2E308197-1431-41A7-962E-335F357175BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E308197-1431-41A7-962E-335F357175BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E308197-1431-41A7-962E-335F357175BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E308197-1431-41A7-962E-335F357175BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E308197-1431-41A7-962E-335F357175BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {001619C2-C452-48AD-8775-5F06BF13AE89}
+	EndGlobalSection
+EndGlobal
